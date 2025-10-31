@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>XRCC Video Portal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="logo">XRCC Video Portal</div>
+      <div class="cloudfolder">
+        <label>Cloud Folder</label>
+        <input id="cloudFolder" placeholder="xrcc" />
+      </div>
+    </header>
+    <main class="center">
+      <div class="card">
+        <div id="droparea" class="drop">
+          <p>Drag &amp; drop video files here, or click to browse</p>
+          <small>Accepted: mp4, mov, avi, mkv — max 200 MB</small>
+          <input id="fileInput" type="file" accept="video/*" />
+        </div>
+        <div id="fileMeta" class="meta hidden">
+          <img id="thumb" alt="thumb" />
+          <div class="info">
+            <div id="fname"></div>
+            <div id="fsize"></div>
+            <button id="uploadBtn" class="btn">Upload</button>
+          </div>
+        </div>
+        <div id="progressArea" class="hidden">
+          <div class="progressBar"><div id="uploadProgress" class="bar"></div></div>
+          <div id="statusText">Idle</div>
+        </div>
+        <div id="resultArea" class="hidden">
+          <video id="resultVideo" controls width="480"></video>
+          <div><a id="resultLink" href="#" target="_blank">Cloudinary URL</a> <button id="copyBtn">Copy</button></div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
